@@ -4,7 +4,7 @@ env:
    parameter-store:
            DB_Name: "/wordpress/db_name"
            DB_User: "/harish/db_user"
-           DB_Password: "/9550892723hA/db_passwoed"
+           DB_Password: "/9550892723hA@/db_passwoed"
            DB_host: "/harish/db_host"
 
 
