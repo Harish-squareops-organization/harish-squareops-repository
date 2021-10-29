@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+   parameter-store:
+           DB_Name: "/harish/db_name"
+           DB_User: "/harish/db_user"
+           DB_Password: "/9550892723hA/db_passwoed"
+           DB_host: "/harish/db_host"
+
+
+
+phases:
+   build:
+        commands:
+            - sed -1 's/database_name_here/'$DB_Name'/' wp-config.php
+            - sed -1 's/username_here/'$DB_User'/' wp-config.php
+            - sed -1 's/password_here/'$DB_Password'/' wp-config.php
+            - sed -1 's/localhost/'$DB_Host'/' wp-config.php
+
+artifacts:
+        files:
+            - '**/*'
